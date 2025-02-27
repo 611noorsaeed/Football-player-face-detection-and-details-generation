@@ -6,12 +6,11 @@ import numpy as np
 import PIL.Image
 
 # Set API Key for Google Gemini
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCrWR7rp35OHAbwNwZbOIAqNymVPoOA0KU"
+os.environ["GOOGLE_API_KEY"] = "your api key"
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
 # Load the Gemini Model
 model = genai.GenerativeModel("models/gemini-1.5-flash-latest")
-
 
 # Function to detect faces using OpenCV (only returns the largest face)
 def detect_faces(image):
@@ -108,3 +107,5 @@ if uploaded_image:
 
     else:
         st.warning("No faces detected. Try another image.")
+
+
